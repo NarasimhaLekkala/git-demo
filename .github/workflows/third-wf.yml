@@ -1,5 +1,5 @@
-name: second-wf  # name of the workflow
-on: push  # when it need to trigger, there are different types
+name: third-wf  # name of the workflow
+on: [push, workflow_dispatch, workflow_call]  # when it need to trigger, there are different types
 jobs:
     node-js:
         runs-on: ubuntu-latest
