@@ -6,6 +6,8 @@ jobs:
         steps:
             - name: Get code
               uses: actions/checkout@v4
+              with:
+                path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
               with:
@@ -19,6 +21,8 @@ jobs:
         steps:
             - name: Get code
               uses: actions/checkout@v4
+              with:
+                path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
               with:
