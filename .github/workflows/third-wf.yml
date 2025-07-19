@@ -6,9 +6,6 @@ jobs:
         steps:
             - name: Get code
               uses: actions/checkout@v4
-              with:
-                repository: git-demo/git-demo
-                path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
               with:
@@ -17,14 +14,19 @@ jobs:
               run: npm install
             - name: run tests
               run: npm test
+    node-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v4   
+
     build-deploy:
+        needs: ['node-js', 'node-job']  # this job depends on the previous one
+        name: build and deploy
         runs-on: ubuntu-latest
         steps:
             - name: Get code
               uses: actions/checkout@v4
-              with:
-                repository: git-demo/git-demo
-                path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
               with:
