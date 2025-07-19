@@ -1,0 +1,11 @@
+name: first-workflow  # name of the worklow
+on: workflow_dispatch    # when it need to trigger, there are different types 
+jobs:          # job doesn't start value immediately
+  first-job:       # name of job(name can be anything test-job or job1 or job2) and doesn't start value immediately
+    runs-on: ubuntu-latest   # name of runner group
+    steps:   #doesn't start value immediately
+      - name: print greeting    # step1
+        run:  echo "hello world!"  # run command 
+      - name: bye world    # step2
+        run: echo "done! bye"   # run command
+      
