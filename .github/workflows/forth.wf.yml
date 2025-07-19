@@ -1,0 +1,9 @@
+name: forth-wf
+on: workflow_dispatch  # this workflow can be triggered manually
+jobs:
+    get-git-details:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get git details
+              run: echo "${{ tojson(github) }}"
+        
