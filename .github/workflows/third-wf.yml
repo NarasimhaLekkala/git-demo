@@ -7,6 +7,7 @@ jobs:
             - name: Get code
               uses: actions/checkout@v4
               with:
+                repository: git-demo/git-demo
                 path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
@@ -22,6 +23,7 @@ jobs:
             - name: Get code
               uses: actions/checkout@v4
               with:
+                repository: git-demo/git-demo
                 path: jscode
             - name: install node.js
               uses: actions/setup-node@v4
